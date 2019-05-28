@@ -1,0 +1,92 @@
+﻿<!--AUM SHREE GANESHAAYA NAMAH||-->
+<!DOCTYPE html>
+<!--This document use bootstrap exclusively because before
+the deadline of Assignment simple bootstrap had been taught-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Index 6 - Resizable (using Mouse) Modifiable Window</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <script language="javascript" src="index_6.js"></script>
+    </head>
+    <body id="body" onload="load()" onmouseup="applyXY()">
+
+        <div class="container">
+            <h1 id="h1">Resizable Modifiable Window Subwindow</h1>
+            <div class="panel panel-success">
+                <div class="panel-heading">Description</div>
+                <div class="panel-body">
+                    The following is a resizable (using mouse) and browser-modifiable iframe with source&nbsp;<a href="https://www.wikipedia.org">Wikipedia Home Page</a>.<br />
+                    <b>Try to open this at night. &nbsp;<img src="emoji.png" class="emoji" /></b><br />
+                </div>
+                <div class="panel-footer">
+                    <b><u>Note:</u></b><br />
+                    <i>
+                        This page opens up the iframe below in default size of 200 px (height) X 300 px (width),
+                        independent of the browser window size. If the user drags the iframe&nbsp;<b><u>lower right corner</u></b>
+                        using mouse, the iframe changes size.<br />
+                        Also the URL can be entered independently!
+                    </i>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <div class="container">
+                <h2 id="h2">Enter Complete Website</h2><br />
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label id="l1" for="tf3">Enter Website:</label>&nbsp;
+                        <input type="text" class="form-control" id="tf1" placeholder="Enter complete URL..." oninput="loadSite()" />
+                    </div>
+                    &emsp;
+                    <div class="form-group">
+                        <input type="button" class="form-control" value="Load Site" onclick="loadSite()">
+                    </div>
+                </form>
+            </div>
+        </center>
+
+        <br /><br />
+    
+        <div>
+            <center>
+                <!--can replace the src attribute with other sites also-->
+                <iframe class="adaptable" name="iframe" id="fr1" src="https://www.wikipedia.org" ondrag="applyXY()" onmousedown="recordXY()" onmouseup="applyXY()" height="200" width="300" style="border:7px solid orange;"></iframe>
+            </center>
+        </div>
+
+        <br /><br />
+    
+        <div class="container">
+            <div class="panel panel-info">
+                <div class="panel-heading">My Other Pages:</div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="index_1.html#iframe">Page 1 (Home Page)</a></li>
+                        <li><a href="index_2.html#iframe">Page 2</a></li>
+                        <li><a href="index_3.html#iframe">Page 3</a></li>
+                        <li><a href="index_4.html#iframe">Page 4</a></li>
+                        <li><a href="index_5.html#iframe">Page 5</a></li>
+                        <li><a href="index_6.html#iframe">Page 6</a></li>
+                        <li><a href="dummy_google.html">Google (Dummy)</a></li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <b><u>Acknowledgment: This page is the result of knowledge from - </u></b>
+                    <ul>
+                        <li><i>Siddhartha Srivastava (PhD Student, IIT Kanpur)</i></li>
+                        <li><i>Hemant Kumar (M. Tech., IIT Kanpur)</i></li>
+                        <li><i>Yugesh Kothari, Yasharth Bajpai, Tanmay Yadav and the whole SoC team</i></li>
+                        <li><i>Ishanh Misra (me - the author)</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

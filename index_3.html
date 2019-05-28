@@ -1,0 +1,93 @@
+﻿<!--AUM SHREE GANESHAAYA NAMAH||-->
+<!DOCTYPE html>
+<!--This document use bootstrap exclusively because before
+the deadline of Assignment simple bootstrap had been taught-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Index 3 - Modifiable Adaptable Window</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <script language="javascript" src="index_3.js"></script>
+    </head>
+    <body id="body" onload="load()" onresize="resize()">
+
+        <div class="container">
+            <h1 id="h1">Modifiable Adaptable Subwindow</h1>
+            <div class="panel panel-success">
+                <div class="panel-heading"><b>Description</b></div>
+                <div class="panel-body">
+                    The following is a modifiable adaptable iframe with source&nbsp;<a href="https://www.wikipedia.org">Wikipedia Home Page</a>.
+                    Its source and size both can be varied... try yourself!<br />
+                    <b>Try to open this at night. The background image is different for day and night. &nbsp;<img src="emoji.png" class="emoji" /></b><br />
+                </div>
+                <div class="panel-footer">
+                    <b><u>Note:</u></b><br />
+                    <i>
+                        This page opens up the iframe below in default size of 200 px (height) X 300 px (width),
+                        independent of the browser window size. If the browser window is enlarged, the frame will enlarge, and vice-versa.
+                        So bigger size of frame than this is possible. One can choose from a list of sites available.
+                    </i>
+                </div>
+            </div>
+        </div>
+    
+        <center>
+            <div class="container">
+                <h2 id="h2">Select A Website</h2>
+                <form>
+                    <div class="form-inline">
+                        <label for="website" id="l1">Select site:</label>
+                        &emsp;
+                        <select class="form-control" id="website" onchange="loadSite()">
+                            <option value="https://www.wikipedia.org">Wikipedia</option>
+                            <option value="https://www.iitk.ac.in">IIT Kanpur (Home Page)</option>
+                            <option value="https://www.lenskart.com">Lenskart</option>
+                            <option value="https://www.ndtv.com">NDTV</option>
+                            <option value="dummy_google.html">Google (Dummy)</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+        </center>
+        <br /><br />
+        <div id="div3">
+            <center>
+                <!--can replace the src attribute with other sites also-->
+                <iframe class="adaptable" name="iframe" id="fr1" src="https://www.wikipedia.org" height="200" width="300" style="border:7px solid orange;"></iframe>
+            </center>
+        </div>
+
+        <br /><br />
+
+        <div class="container">
+            <div class="panel panel-info">
+                <div class="panel-heading">My Other Pages:</div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="index_1.html#iframe">Page 1 (Home Page)</a></li>
+                        <li><a href="index_2.html#iframe">Page 2</a></li>
+                        <li><a href="index_3.html#iframe">Page 3</a></li>
+                        <li><a href="index_4.html#iframe">Page 4</a></li>
+                        <li><a href="index_5.html#iframe">Page 5</a></li>
+                        <li><a href="index_6.html#iframe">Page 6</a></li>
+                        <li><a href="dummy_google.html">Google (Dummy)</a></li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <b><u>Acknowledgment: This page is the result of knowledge from - </u></b>
+                    <ul>
+                        <li><i>Siddhartha Srivastava (PhD Student, IIT Kanpur)</i></li>
+                        <li><i>Hemant Kumar (M. Tech., IIT Kanpur)</i></li>
+                        <li><i>Yugesh Kothari, Yasharth Bajpai, Tanmay Yadav and the whole SoC team</i></li>
+                        <li><i>Ishanh Misra (me - the author)</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
